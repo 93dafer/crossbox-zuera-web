@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>CROSSBOXZUERA | PRO CROSSFIT ZUERA</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed-variant": "#454747",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "tertiary": "#ffb4a9",
+            "on-secondary-container": "#b4b5b5",
+            "primary": "#ffb4a9",
+            "on-surface-variant": "#e5bdb8",
+            "error": "#ffb4ab",
+            "secondary": "#c6c6c7",
+            "on-primary-fixed-variant": "#930004",
+            "background": "#131313",
+            "on-background": "#e5e2e1",
+            "primary-fixed": "#ffdad5",
+            "primary-container": "#d2261e",
+            "tertiary-fixed-dim": "#ffb4a9",
+            "error-container": "#93000a",
+            "surface-container-low": "#1c1b1b",
+            "outline": "#ac8883",
+            "surface-variant": "#353534",
+            "on-error": "#690005",
+            "on-tertiary-container": "#ffebe8",
+            "on-secondary": "#2f3131",
+            "on-secondary-fixed": "#1a1c1c",
+            "outline-variant": "#5c403c",
+            "on-primary-fixed": "#410001",
+            "secondary-container": "#454747",
+            "secondary-fixed": "#e2e2e2",
+            "on-surface": "#e5e2e1",
+            "on-primary-container": "#ffebe8",
+            "inverse-surface": "#e5e2e1",
+            "on-tertiary": "#690002",
+            "surface-tint": "#ffb4a9",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#c6c6c7",
+            "inverse-primary": "#bd1211",
+            "tertiary-fixed": "#ffdad5",
+            "surface-bright": "#393939",
+            "on-tertiary-fixed-variant": "#930004",
+            "tertiary-container": "#d2261e",
+            "on-tertiary-fixed": "#410001",
+            "inverse-on-surface": "#313030",
+            "primary-fixed-dim": "#ffb4a9",
+            "surface-container": "#201f1f",
+            "surface": "#131313",
+            "on-primary": "#690002",
+            "surface-dim": "#131313"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Space Grotesk"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .text-shadow-glow {
+      text-shadow: 0 0 20px rgba(210, 38, 30, 0.4);
+    }
+
+    .brutal-gradient {
+      background: linear-gradient(135deg, #d2261e 0%, #930004 100%);
+    }
+
+    .step-number {
+      -webkit-text-stroke: 1px rgba(210, 38, 30, 0.5);
+      color: transparent;
+    }
+
+    .kinetic-border {
+      border-image: linear-gradient(to right, #d2261e, transparent) 1;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Scroll Reveal Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.reveal-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-100 {
+      transition-delay: 100ms;
+    }
+
+    .reveal-delay-200 {
+      transition-delay: 200ms;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl shadow-[0_32px_32px_rgba(210,38,30,0.15)] flex justify-between items-center px-8 py-2 md:py-3 transition-all duration-300">
+    <div class="flex items-center h-16 md:h-20 group cursor-pointer hover:scale-105 transition-transform duration-300">
+      <img alt="CROSSBOX ZUERA" class="h-full object-contain drop-shadow-[0_0_15px_rgba(210,38,30,0.2)]" src="assets/images/logo.png" />
+    </div>
+    <div class="hidden lg:flex items-center gap-10">
+      <a class="text-[#D2261E] border-b-2 border-[#D2261E] pb-1 font-headline uppercase tracking-tighter font-bold hover:scale-105 transition-transform duration-200"
+        href="#inicio">Inicio</a>
+      <a class="text-[#E5E2E1] hover:text-[#D2261E] transition-colors font-headline uppercase tracking-tighter font-bold hover:scale-105 transition-transform duration-200"
+        href="#instalaciones">Instalaciones</a>
+      <a class="text-[#E5E2E1] hover:text-[#D2261E] transition-colors font-headline uppercase tracking-tighter font-bold hover:scale-105 transition-transform duration-200"
+        href="#precios">Precios</a>
+      <a class="text-[#E5E2E1] hover:text-[#D2261E] transition-colors font-headline uppercase tracking-tighter font-bold hover:scale-105 transition-transform duration-200"
+        href="index.html">Coaches</a>
+      <a class="text-[#E5E2E1] hover:text-[#D2261E] transition-colors font-headline uppercase tracking-tighter font-bold hover:scale-105 transition-transform duration-200"
+        href="#por-que-nosotros">Por Qué</a>
+    </div>
+    <a class="brutal-gradient text-white font-headline font-bold px-6 py-2 uppercase tracking-widest text-sm shadow-[0_0_15px_rgba(210,38,30,0.2)] hover:shadow-[0_0_25px_rgba(210,38,30,0.5)] hover:scale-105 transition-all duration-300 active:scale-95"
+      href="#contacto">
+      ÚNETE AL BOX
+    </a>
+  </nav>
+  <main>
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-surface-container-lowest"
+      id="inicio">
+      <div class="absolute inset-0 z-0">
+        <img alt="Atmósfera de Box Crossfit Industrial"
+          class="w-full h-full object-cover opacity-25 grayscale brightness-50" src="assets/images/final-hero-bg.jpg" />
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40"></div>
+      </div>
+      <div class="relative z-10 text-center px-4 w-full max-w-7xl pt-16">
+        <img alt="Logo CROSSBOX ZUERA"
+          class="mx-auto mb-8 h-[350px] md:h-[550px] lg:h-[600px] w-full max-w-[95vw] md:max-w-none object-contain drop-shadow-[0_0_50px_rgba(210,38,30,0.4)] transition-all duration-500 hover:scale-[1.02]"
+          src="assets/images/logo.png" />
+        <h1
+          class="font-label text-xl md:text-3xl uppercase tracking-[0.6em] font-medium text-white/70 mb-12 drop-shadow-2xl">
+          ENTRENA SIN LÍMITES</h1>
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+          <a class="brutal-gradient w-full md:w-auto text-white font-headline font-black px-12 py-5 text-2xl uppercase tracking-widest shadow-[0_10px_30px_rgba(210,38,30,0.2)] hover:shadow-[0_0_40px_rgba(210,38,30,0.6)] hover:scale-105 transition-all duration-300 active:scale-95"
+            href="#precios">
+            VER PLANES
+          </a>
+          <a class="w-full md:w-auto border-2 border-white/20 backdrop-blur-md font-headline font-black px-12 py-5 text-2xl uppercase tracking-widest hover:bg-white/10 transition-colors"
+            href="#instalaciones">
+            EXPLORAR BOX
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-10 left-10 hidden lg:block">
+        <div class="flex items-center gap-4 text-primary-container font-label uppercase tracking-widest text-xs">
+          <span class="h-[1px] w-12 bg-primary-container animate-pulse"></span>
+          <span>DESLIZA PARA EMPEZAR</span>
+        </div>
+      </div>
+    </section>
+    <!-- 'Why Us' Section -->
+    <section class="py-32 px-8 bg-surface border-y border-outline-variant/15" id="por-que-nosotros">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+          <span class="font-label text-primary-container uppercase tracking-[0.4em] font-bold text-sm">EL ESTÁNDAR
+            ZUERA</span>
+          <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-4">¿POR QUÉ CROSSBOX
+            ZUERA?</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div class="group">
+            <div
+              class="w-20 h-20 brutal-gradient flex items-center justify-center mb-8 rotate-3 group-hover:rotate-0 transition-transform">
+              <span class="material-symbols-outlined text-4xl text-white">groups</span>
+            </div>
+            <h3 class="font-headline text-3xl font-black uppercase mb-4 tracking-tight">COMUNIDAD REAL</h3>
+            <p class="text-on-surface-variant text-lg leading-relaxed">Más que un box, somos una comunidad que se empuja
+              a superar límites cada día. Aquí nadie entrena solo; el grupo es el motor que nos hace crecer a todos
+              juntos.</p>
+          </div>
+          <div class="group">
+            <div
+              class="w-20 h-20 brutal-gradient flex items-center justify-center mb-8 -rotate-3 group-hover:rotate-0 transition-transform">
+              <span class="material-symbols-outlined text-4xl text-white">fitness_center</span>
+            </div>
+            <h3 class="font-headline text-3xl font-black uppercase mb-4 tracking-tight">EQUIPO PRO</h3>
+            <p class="text-on-surface-variant text-lg leading-relaxed">Disponemos de equipamiento de primer nivel y
+              material de alta calidad diseñado para el máximo rendimiento, optimizando cada espacio para que nada frene
+              tu progreso.</p>
+          </div>
+          <div class="group">
+            <div
+              class="w-20 h-20 brutal-gradient flex items-center justify-center mb-8 rotate-6 group-hover:rotate-0 transition-transform">
+              <span class="material-symbols-outlined text-4xl text-white">psychology</span>
+            </div>
+            <h3 class="font-headline text-3xl font-black uppercase mb-4 tracking-tight">COACHING EXPERTO</h3>
+            <p class="text-on-surface-variant text-lg leading-relaxed">Edgar y Jesús supervisan cada movimiento.
+              Seguridad y técnica son nuestra prioridad absoluta para que crezcas sin lesiones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Facilities -->
+    <section class="py-32 px-8 bg-surface-container-low" id="instalaciones">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div>
+            <span class="font-label text-primary-container uppercase tracking-widest font-bold">LA FORJA</span>
+            <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-2">EL BOX</h2>
+          </div>
+          <p class="font-body text-on-surface-variant text-xl max-w-md">Espacios diseñados para el alto rendimiento. Sin
+            adornos, solo hierro y magnesio.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[800px]">
+          <div class="md:col-span-8 relative overflow-hidden group border border-outline-variant/15">
+            <img alt="Zona de WOD"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uhRIr6N8QpQFSSzbmbNmr04fziSzuHwqonwToOdTbeY_kq5wtGYoCLEboEWFwsCuzXGxxf_piSaoqeC55mQJbPGONdKlzyn5dSVA_6tsE_dUaBWXIlNhwohppGezWIk-Ohl1HkTQV8a6DF4n7bWHM4KvqR61p2cLyA_GgygqnEZyKoJopx2cATJvg8SVMkLCLZX-LhqGxYJdfcND-uY1AgNwKhWS2Ps4r5-XQegx_wCOWA_eCTWIAz8bUK7D2i_DNaTYKvlP2NF6w" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="font-headline text-2xl font-bold uppercase">Zona de Entrenamiento</span>
+            </div>
+          </div>
+          <div class="md:col-span-4 relative overflow-hidden group border border-outline-variant/15">
+            <img alt="Pesas libres"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uj-Nrf5ekUGHVVd4UUuxVx1EK3fIb_mNxjwq_qW0rUiLmrqWuw_8VibQgPAtENm7vvVRgqEOOjv74G3REAerFSfnWbEHOWY0Eqp9tRf15Yd1O_jhTNfEdpBTDrl622J9aimO5hoqNRViCk5TPGY6aqg54oFB-lvoXjd5SBUW91wCNZOCYz_H2DwymRRYEo5tqAlCWiliYyhbyV0LSlqiWjG9d0l7iWArDzYc7XnBDiN-UlxNLCZTcnA9bWjdmwGge-3NYXsI9t7RQ" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="font-headline text-2xl font-bold uppercase">Equipamiento Maniak</span>
+            </div>
+          </div>
+          <div class="md:col-span-4 relative overflow-hidden group border border-outline-variant/15">
+            <img alt="Zona de cardio"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uhZDXNJFFZZ52JPN98if0CPKPA0Rm0TUJxxrr9z0AsAaq0ilRqZgDMYxmodp2hDbpiGF7VXj06YFogzfaW10Y_AI_LkEfbE2yaq3sDEi_xP7nz1mI7C_94RZQcgVoyLJxLiZZLKLcNLZjke_wCnN3Khlbt1SLtc2mp5kAUPyv3TLm9SADYd3AlnoicGAMVrt2egV8P7xssKPQqqaBxRrdfjNmi5MbUZi_TaOGEam1BZzgZvdiEm31Na4X4MvZ7h51f5B83GNRZ3" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="font-headline text-2xl font-bold uppercase">Vestuarios y Duchas</span>
+            </div>
+          </div>
+          <div class="md:col-span-8 relative overflow-hidden group border border-outline-variant/15">
+            <img alt="Halterofilia"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uhHgafGFozORXMsM0w_ppamZtmNQ8_oWj-lordQ-eN45LZtGIKqIT7HSWyT-ENLRMqTGD3TvuzxmaPpb6OiECd3hwlYElk5Lvp3-e1tTdOPqpacwKeUwh8NbYdgmE1acsnYG7hwFWW8yINK_Hfmz8oxRF8C4cVfXYJ8B1ftcnkATqHdKdRnBFos66qhO6GrTJKMT594dqpUthvwFxSlLR1OPkfts6P8X6ynObpIfy9iQyoM7THSXmCSagFzOaG6yqeEG70Xyj6zyw" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="font-headline text-2xl font-bold uppercase">Área Técnica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Plans & Pricing -->
+    <section class="py-32 px-8 bg-surface" id="precios">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+          <span class="font-label text-on-surface-variant uppercase tracking-[0.4em] text-sm">TARIFAS Y
+            MEMBRESÍAS</span>
+          <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-4">ELIGE TU NIVEL</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 mb-24 border border-outline-variant/15">
+          <!-- Limited Membership x2 -->
+          <div
+            class="bg-surface-container-low p-16 flex flex-col items-center text-center border-r border-outline-variant/15">
+            <span class="font-label text-on-surface-variant uppercase tracking-widest text-xs mb-8">BÁSICO</span>
+            <h3 class="font-headline text-3xl font-black mb-6 uppercase">Abono limitado x2</h3>
+            <div class="font-headline text-7xl font-black mb-8 flex items-baseline gap-1">55€<span
+                class="text-xl font-normal text-on-surface-variant">/mes</span></div>
+            <ul class="space-y-6 mb-12 text-on-surface-variant font-medium text-lg">
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-primary-container">check</span> 2 días a la semana</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-primary-container">check</span> 4 accesos Open Box</li>
+            </ul>
+            <button
+              class="w-full border-2 border-primary-container text-primary-container py-5 font-headline font-black uppercase hover:bg-primary-container hover:text-white transition-all">SELECCIONAR</button>
+          </div>
+          <!-- Limited Membership x3 (Featured) -->
+          <div
+            class="bg-surface p-16 flex flex-col items-center text-center relative z-10 shadow-[0_0_60px_rgba(210,38,30,0.15)] scale-105 ring-4 ring-primary-container">
+            <div
+              class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-container text-white px-10 py-2 font-label text-sm font-black uppercase tracking-widest shadow-xl">
+              MÁS POPULAR</div>
+            <span class="font-label text-primary-container uppercase tracking-widest text-xs mb-8">RECOMENDADO</span>
+            <h3 class="font-headline text-3xl font-black mb-6 uppercase">Abono limitado x3</h3>
+            <div class="font-headline text-7xl font-black mb-8 flex items-baseline gap-1">65€<span
+                class="text-xl font-normal text-on-surface-variant">/mes</span></div>
+            <ul class="space-y-6 mb-12 font-medium text-lg">
+              <li class="flex items-center gap-2 justify-center"><span
+                  class="material-symbols-outlined text-primary-container">check_circle</span> 3 días a la semana</li>
+              <li class="flex items-center gap-2 justify-center"><span
+                  class="material-symbols-outlined text-primary-container">check_circle</span> 8 accesos Open Box</li>
+            </ul>
+            <button
+              class="w-full brutal-gradient py-6 font-headline font-black text-xl uppercase shadow-[0_10px_30px_rgba(210,38,30,0.2)] hover:shadow-[0_0_40px_rgba(210,38,30,0.6)] hover:scale-105 transition-all duration-300 active:scale-95 text-white">ÚNETE
+              AHORA</button>
+          </div>
+          <!-- Unlimited Membership -->
+          <div
+            class="bg-surface-container-low p-16 flex flex-col items-center text-center border-l border-outline-variant/15">
+            <span class="font-label text-on-surface-variant uppercase tracking-widest text-xs mb-8">ÉLITE</span>
+            <h3 class="font-headline text-3xl font-black mb-6 uppercase">Abono ilimitado</h3>
+            <div class="font-headline text-7xl font-black mb-8 flex items-baseline gap-1">75€<span
+                class="text-xl font-normal text-on-surface-variant">/mes</span></div>
+            <ul class="space-y-6 mb-12 text-on-surface-variant font-medium text-lg">
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-primary-container">check</span> Días ilimitados</li>
+              <li class="flex items-center gap-2"><span
+                  class="material-symbols-outlined text-primary-container">check</span> Acceso total WOD &amp; Open</li>
+            </ul>
+            <button
+              class="w-full border-2 border-primary-container text-primary-container py-5 font-headline font-black uppercase hover:bg-primary-container hover:text-white transition-all">SELECCIONAR</button>
+          </div>
+        </div>
+        <!-- Other Plans -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-surface-container-high p-12 border-b-8 border-primary-container group hover:-translate-y-2 transition-transform">
+            <h3 class="font-headline text-2xl font-black uppercase mb-4">Bono 10 clases</h3>
+            <div class="font-headline text-5xl font-black mb-6">85€</div>
+            <p class="text-on-surface-variant mb-10 text-lg">Válido para 10 sesiones de entrenamiento flexible. Sin
+              fecha de caducidad.</p>
+            <button
+              class="w-full py-4 border-2 border-primary-container/30 font-headline font-black uppercase hover:bg-primary-container/10 transition-colors">COMPRAR
+              BONO</button>
+          </div>
+          <div
+            class="bg-surface-container-high p-12 border-b-8 border-primary-container group hover:-translate-y-2 transition-transform">
+            <h3 class="font-headline text-2xl font-black uppercase mb-4">Clase única</h3>
+            <div class="font-headline text-5xl font-black mb-6">9€</div>
+            <p class="text-on-surface-variant mb-10 text-lg">Ideal para probar el box por primera vez o si estás de paso
+              por Zuera.</p>
+            <button
+              class="w-full py-4 border-2 border-primary-container/30 font-headline font-black uppercase hover:bg-primary-container/10 transition-colors">PROBAR
+              CLASE</button>
+          </div>
+          <div
+            class="bg-surface-container-high p-12 border-b-8 border-primary-container group hover:-translate-y-2 transition-transform">
+            <h3 class="font-headline text-2xl font-black uppercase mb-4">Tarifa Fitness</h3>
+            <div class="font-headline text-5xl font-black mb-6">45€</div>
+            <p class="text-on-surface-variant mb-10 text-lg">12 clases mensuales, Open Box y programación completa para
+              mantenimiento.</p>
+            <button
+              class="w-full py-4 border-2 border-primary-container/30 font-headline font-black uppercase hover:bg-primary-container/10 transition-colors">CONTRATAR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Coaches -->
+    <section class="py-32 px-8 bg-surface-container-lowest" id="coaches">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+          <div class="max-w-2xl">
+            <span class="font-label text-primary-container uppercase tracking-widest font-bold">LOS MENTORES</span>
+            <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-2">NUESTROS COACHES
+            </h2>
+          </div>
+          <p class="font-body text-on-surface-variant text-xl max-w-sm italic">"Experiencia forjada en acero y sudor.
+            Aprende de los mejores."</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Coach Edgar -->
+          <div class="group bg-surface-container-low border border-outline-variant/15">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img alt="Coach Edgar" class="w-full h-full object-cover transition-all duration-700"
+                src="https://lh3.googleusercontent.com/aida/ADBb0ujvPwoyyN4cGFJgypQlXSpcB52VqusLisZ2L6NfwrlV3SZg-9Pnm2_I6ldYMyCMzlYUykiVWsjbXOcpjTVCuD0CHM7YNqBdnYR4pf8WrFysd89Cd_IvIHzVKUxezRm-mboUeN0yuQgPpcl6qZ6XffBRMcpZnNbcRxtsjx1tHcj4ZmrTzJD4Jq9fRC9V9buhDYF86fPfuoOmSYrktQgFdW11OUhU4WHb1vBmXkGw7LHyJJrVfdq6FDqf3KlX93Y0lFE-1D_IBlrO" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-headline text-4xl font-black uppercase tracking-tighter mb-2">Edgar</h3>
+              <span
+                class="font-label text-primary-container uppercase tracking-widest text-sm font-black block mb-6">ENTRENADOR</span>
+              <p class="font-body text-on-surface-variant text-lg leading-relaxed">Soy Edgar Fernández Anillo,
+                zufariense y apasionado del deporte. Varios años practicando este deporte en los mejores Box de Zaragoza
+                me han transmitido unos valores de salud y bienestar que me gustaría trasladar ahora a la gente de mi
+                alrededor forjando una gran comunidad. Acompáñanos!</p>
+            </div>
+          </div>
+          <!-- Coach Jesús -->
+          <div class="group bg-surface-container-low border border-outline-variant/15">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img alt="Coach Jesús" class="w-full h-full object-cover transition-all duration-700"
+                src="https://lh3.googleusercontent.com/aida/ADBb0uhEYybxI1VpU_toSkN05tVal-hCzIKHy8oVawPMoGDyEH2bmsnZZBmDq78-85lJH4Eo-yamX40mB8B4tq2SGaEptIxdc1qeH5uKc-_eelHfthoHdBozxE6AxhAgMD4DM2fBN3iBa5GomZQrDQuyVqIw_ASViiql5HRq5v2K0Q8DOJZ9Q1gDPhH1L8phNEXVYeLMf-4LYcqtuqMtZWK6ggcVA4wgPh79PapR0_9TkdjB4ojkPkm4neHx71P9xdWIfvN1c2OXqqmx" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-headline text-4xl font-black uppercase tracking-tighter mb-2">Jesús</h3>
+              <span
+                class="font-label text-primary-container uppercase tracking-widest text-sm font-black block mb-6">ENTRENADOR</span>
+              <p class="font-body text-on-surface-variant text-lg leading-relaxed">Soy Jesús, un apasionado militar y
+                padre de tres hijos. he decidido abrir mi propio box de Fitness en Zuera (Zaragoza). En nuestro espacio
+                acogedor y motivador, te ayudaremos a mejorar tu bienestar físico y mental a través del entrenamiento.
+                Ya seas un padre ocupado o alguien en busca de un estilo de vida saludable. ¡Únete!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Location & Schedule -->
+    <section class="py-32 px-8 bg-surface border-y border-outline-variant/15" id="ubicacion">
+      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-stretch">
+        <div class="lg:w-1/2 flex flex-col">
+          <span class="font-label text-primary-container uppercase tracking-widest font-bold">OPERACIONES</span>
+          <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-2 mb-12">UBICACIÓN</h2>
+          <div class="space-y-12 grow">
+            <div class="flex items-start gap-6">
+              <div class="w-12 h-12 brutal-gradient flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-white">location_on</span>
+              </div>
+              <div>
+                <h4 class="font-headline text-2xl font-black uppercase mb-2">HORARIO</h4>
+                <p class="text-on-surface-variant font-medium text-lg">Avenida Pirineos, 16<br />50800 Zuera, Zaragoza
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6">
+              <div class="w-12 h-12 brutal-gradient flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-white">schedule</span>
+              </div>
+              <div class="w-full">
+                <h4 class="font-headline text-2xl font-black uppercase mb-6">HORARIO</h4>
+                <div class="grid grid-cols-1 gap-3 font-headline text-lg">
+                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
+                    <span class="text-primary-container font-black uppercase">Lunes</span>
+                    <span class="font-medium">7:00-10:30 y 17:00-21:00</span>
+                  </div>
+                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
+                    <span class="text-primary-container font-black uppercase">Martes</span>
+                    <span class="font-medium">17:00-22:00</span>
+                  </div>
+                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
+                    <span class="text-primary-container font-black uppercase">Miércoles</span>
+                    <span class="font-medium">7:00, 10:30 y 17:00-21:00</span>
+                  </div>
+                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
+                    <span class="text-primary-container font-black uppercase">Jueves</span>
+                    <span class="font-medium">17:00-22:00</span>
+                  </div>
+                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
+                    <span class="text-primary-container font-black uppercase">Viernes</span>
+                    <span class="font-medium">7:00-10:30 y 17:00-20:00</span>
+                  </div>
+                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
+                    <span class="text-primary-container font-black uppercase">Sábado</span>
+                    <span class="font-medium">9:30-10:30</span>
+                  </div>
+                  <div class="flex justify-between pt-1">
+                    <span class="text-primary-container/40 font-black uppercase">Domingo</span>
+                    <span class="italic text-on-surface-variant opacity-40">CERRADO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="flex items-center gap-4 font-headline font-black uppercase group mt-16 text-2xl text-white hover:text-primary-container transition-colors"
+            href="https://maps.google.com" target="_blank">
+            <span>VER EN GOOGLE MAPS</span>
+            <span
+              class="material-symbols-outlined group-hover:translate-x-4 transition-transform text-4xl">arrow_forward</span>
+          </a>
+        </div>
+        <div
+          class="lg:w-1/2 min-h-[500px] bg-surface-container-highest relative overflow-hidden border-8 border-surface-container-low shadow-2xl">
+          <img alt="Mapa de ubicación"
+            class="w-full h-full object-cover grayscale brightness-50 contrast-125 opacity-70 group-hover:scale-105 transition-transform duration-[5s]"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6ShGQfA_bnEZucB7NhqMJrB8hMN_fbihkKjzrnuhenx_6F-4ADdmJ9UUKJLSPHImUu8-RCGgBY25Cw2RDdf9snp_TEZm7DJQiBiLFw9qzwT9aPcyAEoVIWxW49UepBbjdd-bXm9SPXPGsR0gs-F0deyjhCu9iAFrBL3W9YNp91HCCRyys21wjaMuhdWiKIw9XpATXQYezdTtkhWIIFcYneQ4dAPTqjr3pPbn7a1HuA2w16x8hvcE-T1nWQKa0w89e_S7w3kOHcc" />
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div
+              class="w-24 h-24 brutal-gradient rounded-full flex items-center justify-center animate-ping absolute opacity-30">
+            </div>
+            <div
+              class="w-16 h-16 brutal-gradient rounded-full flex items-center justify-center relative z-10 shadow-[0_0_50px_#D2261E]">
+              <span class="material-symbols-outlined text-white text-4xl">pin_drop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-32 px-8 bg-surface-container-low" id="faq">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter">PREGUNTAS FRECUENTES</h2>
+          <p class="font-label text-on-surface-variant tracking-widest mt-2">ACLARA TUS DUDAS ANTES DE EMPEZAR</p>
+        </div>
+        <div class="space-y-6">
+          <details class="group bg-surface border border-outline-variant/15 p-8 cursor-pointer" open="">
+            <summary
+              class="list-none flex justify-between items-center font-headline text-2xl font-black uppercase tracking-tight">
+              ¿NECESITO ESTAR EN FORMA PARA EMPEZAR?
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-6 text-on-surface-variant text-lg leading-relaxed">¡Para nada! El CrossFit es 100% escalable.
+              Adaptamos cada ejercicio a tu nivel actual. El objetivo es que te pongas en forma aquí, no que ya lo estés
+              al llegar.</p>
+          </details>
+
+          <details class="group bg-surface border border-outline-variant/15 p-8 cursor-pointer">
+            <summary
+              class="list-none flex justify-between items-center font-headline text-2xl font-black uppercase tracking-tight">
+              ¿HAY CLASES PARA PRINCIPIANTES?
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-6 text-on-surface-variant text-lg leading-relaxed">¡Por supuesto! Todas las sesiones son
+              completamente adaptables. No importa tu nivel actual, los coaches ajustarán la intensidad y la técnica de
+              cada ejercicio a tus capacidades para que progreses de forma segura.</p>
+          </details>
+
+          <details class="group bg-surface border border-outline-variant/15 p-8 cursor-pointer">
+            <summary
+              class="list-none flex justify-between items-center font-headline text-2xl font-black uppercase tracking-tight">
+              ¿QUÉ MATERIAL NECESITO TRAER?
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-6 text-on-surface-variant text-lg leading-relaxed">Solo necesitas ropa cómoda, calzado
+              deportivo y muchas ganas de entrenar. Nosotros ponemos el resto.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- How to book my first class -->
+    <section class="py-32 px-8 bg-surface border-y border-outline-variant/15 overflow-hidden" id="reserva">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-24 relative">
+          <span class="font-label text-primary-container uppercase tracking-widest font-bold">TU PRIMER WOD</span>
+          <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-4">¿CÓMO RESERVAR?</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 relative">
+          <!-- Step 1 -->
+          <div class="group relative">
+            <div
+              class="step-number font-headline text-[12rem] font-black leading-none absolute -top-24 -left-8 opacity-10 pointer-events-none">
+              01</div>
+            <div
+              class="bg-surface-container-high p-12 border-t-8 border-primary-container relative z-10 h-full transition-all duration-300 group-hover:-translate-y-4 shadow-xl">
+              <div class="w-16 h-16 brutal-gradient flex items-center justify-center mb-8">
+                <span class="material-symbols-outlined text-3xl text-white">send</span>
+              </div>
+              <h3 class="font-headline text-3xl font-black uppercase mb-6 tracking-tight">SOLICITA TU PLAZA</h3>
+              <p class="text-on-surface-variant text-lg font-medium leading-relaxed">
+                Contáctanos vía formulario o email. Solo necesitamos tu nombre y las ganas de empezar. Te responderemos
+                en menos de 24 horas para coordinar tu prueba gratuita.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="group relative">
+            <div
+              class="step-number font-headline text-[12rem] font-black leading-none absolute -top-24 -left-8 opacity-10 pointer-events-none">
+              02</div>
+            <div
+              class="bg-surface-container-high p-12 border-t-8 border-primary-container relative z-10 h-full transition-all duration-300 group-hover:-translate-y-4 shadow-xl">
+              <div class="w-16 h-16 brutal-gradient flex items-center justify-center mb-8">
+                <span class="material-symbols-outlined text-3xl text-white">phonelink_setup</span>
+              </div>
+              <h3 class="font-headline text-3xl font-black uppercase mb-6 tracking-tight">ACTIVA TU PERFIL</h3>
+              <p class="text-on-surface-variant text-lg font-medium leading-relaxed">
+                Recibirás un email con tus credenciales. Sigue el enlace para validar tu cuenta en nuestro sistema. Es
+                un proceso de 30 segundos que te abre las puertas del box.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="group relative">
+            <div
+              class="step-number font-headline text-[12rem] font-black leading-none absolute -top-24 -left-8 opacity-10 pointer-events-none">
+              03</div>
+            <div
+              class="bg-surface-container-high p-12 border-t-8 border-primary-container relative z-10 h-full transition-all duration-300 group-hover:-translate-y-4 shadow-xl">
+              <div class="w-16 h-16 brutal-gradient flex items-center justify-center mb-8">
+                <span class="material-symbols-outlined text-3xl text-white">calendar_month</span>
+              </div>
+              <h3 class="font-headline text-3xl font-black uppercase mb-6 tracking-tight">RESERVA Y ENTRENA</h3>
+              <p class="text-on-surface-variant text-lg font-medium leading-relaxed">
+                Descarga WodBuster, loguéate y elige tu sesión. Dentro encontrarás el horario completo. ¡Ya solo queda
+                sudar la camiseta! Nos vemos en el Box.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Us -->
+    <section class="py-32 px-8 bg-surface-container-lowest" id="contacto">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-20">
+          <span class="font-label text-primary-container uppercase tracking-widest font-bold">EMPIEZA HOY</span>
+          <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-4">CONTÁCTANOS</h2>
+          <p class="font-body text-on-surface-variant text-xl mt-6 max-w-2xl mx-auto font-medium">Este es el primer paso para unirte oficialmente al box o para resolver cualquier duda que tengas. Déjanos tu mensaje y te responderemos enseguida.</p>
+        </div>
+        <form id="contact-form" action="https://formspree.io/f/xaqlqpjy" method="POST"
+          class="space-y-12 bg-surface p-12 border border-outline-variant/15 shadow-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="flex flex-col gap-4">
+              <label class="font-label uppercase tracking-widest text-xs font-black text-primary-container">Nombre
+                Completo</label>
+              <input name="nombre" required
+                class="bg-surface-container-low border-b-2 border-outline-variant/30 py-4 px-4 focus:ring-0 focus:border-primary-container text-xl font-headline transition-colors outline-none placeholder:text-surface-container-highest"
+                placeholder="TU NOMBRE" type="text" />
+            </div>
+            <div class="flex flex-col gap-4">
+              <label class="font-label uppercase tracking-widest text-xs font-black text-primary-container">Email de
+                Contacto</label>
+              <input name="email" required
+                class="bg-surface-container-low border-b-2 border-outline-variant/30 py-4 px-4 focus:ring-0 focus:border-primary-container text-xl font-headline transition-colors outline-none placeholder:text-surface-container-highest"
+                placeholder="TU EMAIL" type="email" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <label class="font-label uppercase tracking-widest text-xs font-black text-primary-container">Tu
+              Mensaje</label>
+            <textarea name="mensaje" required
+              class="bg-surface-container-low border-b-2 border-outline-variant/30 py-4 px-4 focus:ring-0 focus:border-primary-container text-xl font-headline transition-colors outline-none resize-none placeholder:text-surface-container-highest"
+              placeholder="¿CÓMO PODEMOS AYUDARTE?" rows="4"></textarea>
+          </div>
+          <div id="form-status" class="hidden text-center font-headline font-bold text-primary-container border border-primary-container/30 bg-primary-container/10 p-4 -mb-4"></div>
+          <div class="pt-8">
+            <button
+              class="brutal-gradient w-full py-8 font-headline font-black text-3xl uppercase tracking-widest shadow-[0_10px_30px_rgba(210,38,30,0.2)] hover:shadow-[0_0_40px_rgba(210,38,30,0.6)] hover:scale-[1.02] transition-all duration-300 text-white"
+              type="submit">
+              ENVIAR
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#131313] w-full py-8 border-t border-outline-variant/15 px-8">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+      <div class="h-32">
+        <img alt="CROSSBOX ZUERA" class="h-full object-contain" src="assets/images/logo.png" />
+      </div>
+      <div
+        class="flex flex-col md:flex-row justify-between w-full items-center gap-4 font-headline text-[10px] uppercase tracking-widest font-bold">
+        <div class="text-on-surface-variant/60 text-center md:text-left">© 2024 CROSSBOX ZUERA.</div>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 text-center md:text-left">
+          <a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="aviso-legal.html">Aviso Legal</a>
+          <a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="politica-privacidad.html">Política de Privacidad</a>
+          <a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="politica-cookies.html">Política de Cookies</a>
+          <a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookies Popup -->
+  <div id="cookies-popup" class="fixed bottom-0 left-0 w-full bg-surface-container-high border-t border-primary-container/30 p-6 md:p-8 z-[100] transform translate-y-full transition-transform duration-500 shadow-[0_-20px_40px_rgba(0,0,0,0.5)]">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-on-surface-variant text-sm md:text-base leading-relaxed">
+        Utilizamos cookies propias y de terceros para analizar el uso de nuestra web y personalizar tu experiencia. Si continuas navegando, consideramos que aceptas su uso. Puedes obtener más información y configurar tus preferencias en nuestra <a href="politica-cookies.html" class="text-primary-container underline font-bold hover:text-white transition-colors">Política de Cookies</a>.
+      </div>
+      <div class="flex gap-4 shrink-0 w-full md:w-auto">
+        <button id="accept-cookies" class="w-full md:w-auto brutal-gradient px-8 py-3 font-headline font-black text-white uppercase shadow-[0_5px_15px_rgba(210,38,30,0.2)] hover:scale-105 transition-all cursor-pointer">Aceptar y Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Reveal Animations
+      const elementsToReveal = document.querySelectorAll('section h2, section .group, #precios .bg-surface-container-low, #precios .bg-surface, #precios .bg-surface-container-high, #contacto form');
+      elementsToReveal.forEach((el, index) => {
+        el.classList.add('reveal');
+        if (index % 3 === 1) el.classList.add('reveal-delay-100');
+        if (index % 3 === 2) el.classList.add('reveal-delay-200');
+      });
+
+      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // Cookies Popup Logic
+      const cookiesPopup = document.getElementById('cookies-popup');
+      const acceptCookiesBtn = document.getElementById('accept-cookies');
+      
+      if (cookiesPopup && !localStorage.getItem('cookiesAccepted')) {
+        setTimeout(() => {
+          cookiesPopup.classList.remove('translate-y-full');
+        }, 1500);
+      }
+
+      if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', () => {
+          localStorage.setItem('cookiesAccepted', 'true');
+          cookiesPopup.classList.add('translate-y-full');
+        });
+      }
+
+      // AJAX Form Submission
+      const contactForm = document.getElementById('contact-form');
+      const formStatus = document.getElementById('form-status');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = 'ENVIANDO...';
+          submitBtn.classList.add('opacity-70', 'pointer-events-none');
+          formStatus.classList.add('hidden');
+
+          try {
+            const response = await fetch(contactForm.action, {
+              method: contactForm.method,
+              body: new FormData(contactForm),
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+              contactForm.innerHTML = '<div class="text-center py-12 flex flex-col items-center justify-center animate-[fadeInUp_0.5s_ease-out]"><div class="w-24 h-24 mb-6 rounded-full brutal-gradient flex items-center justify-center shadow-[0_0_40px_rgba(210,38,30,0.6)]"><span class="material-symbols-outlined text-white text-5xl">task_alt</span></div><h3 class="font-headline text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">¡EMAIL ENVIADO!</h3><p class="text-on-surface-variant font-medium text-lg leading-relaxed max-w-lg mx-auto">Hemos recibido tu mensaje con éxito.<br><br>Si has solicitado unirte al box, recibirás muy pronto el email de WodBuster con tus accesos. Si tenías alguna consulta, nuestros coaches te responderán a la mayor brevedad. ¡Gracias!</p></div>';
+            } else {
+              formStatus.classList.remove('hidden');
+              formStatus.innerHTML = 'Error en el servidor. Por favor, revisa tus datos o inténtalo en unos minutos.';
+              submitBtn.innerHTML = originalText;
+              submitBtn.classList.remove('opacity-70', 'pointer-events-none');
+            }
+          } catch (error) {
+            formStatus.classList.remove('hidden');
+            formStatus.innerHTML = 'Fallo de conexión. Comprueba que estás conectado a internet y vuelve a pulsar enviar.';
+            submitBtn.innerHTML = originalText;
+            submitBtn.classList.remove('opacity-70', 'pointer-events-none');
+          }
+        });
+      }
+
+      // Active Navbar Tracker
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('nav a[href^="#"]:not(.brutal-gradient)');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('text-[#D2261E]', 'border-b-2', 'border-[#D2261E]');
+          link.classList.add('text-[#E5E2E1]');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.remove('text-[#E5E2E1]');
+            link.classList.add('text-[#D2261E]', 'border-b-2', 'border-[#D2261E]');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
