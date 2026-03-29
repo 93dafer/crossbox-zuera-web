@@ -230,7 +230,7 @@
     <!-- Our Facilities -->
     <section class="py-32 px-8 bg-surface-container-low" id="instalaciones">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
           <div>
             <span class="font-label text-primary-container uppercase tracking-widest font-bold">LA FORJA</span>
             <h2 class="font-headline text-5xl md:text-8xl font-black uppercase tracking-tighter mt-2">EL BOX</h2>
@@ -451,7 +451,7 @@
                 <span class="material-symbols-outlined text-white">location_on</span>
               </div>
               <div>
-                <h4 class="font-headline text-2xl font-black uppercase mb-2">HORARIO</h4>
+                <h4 class="font-headline text-2xl font-black uppercase mb-2">DIRECCIÓN</h4>
                 <p class="text-on-surface-variant font-medium text-lg">Avenida Pirineos, 16<br />50800 Zuera, Zaragoza
                 </p>
               </div>
@@ -462,34 +462,34 @@
               </div>
               <div class="w-full">
                 <h4 class="font-headline text-2xl font-black uppercase mb-6">HORARIO</h4>
-                <div class="grid grid-cols-1 gap-3 font-headline text-lg">
-                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
-                    <span class="text-primary-container font-black uppercase">Lunes</span>
-                    <span class="font-medium">7:00-10:30 y 17:00-21:00</span>
+                <div class="grid grid-cols-1 gap-4 font-headline text-lg mt-4">
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-outline-variant/15 pb-3 gap-1">
+                    <span class="text-primary-container font-black uppercase tracking-wider">Lunes</span>
+                    <span class="font-medium sm:text-right">7:00-10:30 y 17:00-21:00</span>
                   </div>
-                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
-                    <span class="text-primary-container font-black uppercase">Martes</span>
-                    <span class="font-medium">17:00-22:00</span>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-outline-variant/15 pb-3 gap-1">
+                    <span class="text-primary-container font-black uppercase tracking-wider">Martes</span>
+                    <span class="font-medium sm:text-right">17:00-22:00</span>
                   </div>
-                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
-                    <span class="text-primary-container font-black uppercase">Miércoles</span>
-                    <span class="font-medium">7:00, 10:30 y 17:00-21:00</span>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-outline-variant/15 pb-3 gap-1">
+                    <span class="text-primary-container font-black uppercase tracking-wider">Miércoles</span>
+                    <span class="font-medium sm:text-right">7:00, 10:30 y 17:00-21:00</span>
                   </div>
-                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
-                    <span class="text-primary-container font-black uppercase">Jueves</span>
-                    <span class="font-medium">17:00-22:00</span>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-outline-variant/15 pb-3 gap-1">
+                    <span class="text-primary-container font-black uppercase tracking-wider">Jueves</span>
+                    <span class="font-medium sm:text-right">17:00-22:00</span>
                   </div>
-                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
-                    <span class="text-primary-container font-black uppercase">Viernes</span>
-                    <span class="font-medium">7:00-10:30 y 17:00-20:00</span>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-outline-variant/15 pb-3 gap-1">
+                    <span class="text-primary-container font-black uppercase tracking-wider">Viernes</span>
+                    <span class="font-medium sm:text-right">7:00-10:30 y 17:00-20:00</span>
                   </div>
-                  <div class="flex justify-between border-b border-outline-variant/15 pb-2">
-                    <span class="text-primary-container font-black uppercase">Sábado</span>
-                    <span class="font-medium">9:30-10:30</span>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-outline-variant/15 pb-3 gap-1">
+                    <span class="text-primary-container font-black uppercase tracking-wider">Sábado</span>
+                    <span class="font-medium sm:text-right">9:30-10:30</span>
                   </div>
-                  <div class="flex justify-between pt-1">
-                    <span class="text-primary-container/40 font-black uppercase">Domingo</span>
-                    <span class="italic text-on-surface-variant opacity-40">CERRADO</span>
+                  <div class="flex flex-col sm:flex-row justify-between sm:items-center pt-2 gap-1">
+                    <span class="text-primary-container/40 font-black uppercase tracking-wider">Domingo</span>
+                    <span class="italic text-on-surface-variant opacity-40 sm:text-right">CERRADO</span>
                   </div>
                 </div>
               </div>
@@ -503,9 +503,9 @@
           </a>
         </div>
         <div
-          class="lg:w-1/2 min-h-[500px] bg-surface-container-highest relative overflow-hidden border-8 border-surface-container-low shadow-2xl">
+          class="lg:w-1/2 min-h-[400px] md:min-h-[500px] bg-surface-container-highest relative overflow-hidden border-8 border-surface-container-low shadow-2xl group">
           <img alt="Mapa de ubicación"
-            class="w-full h-full object-cover grayscale brightness-50 contrast-125 opacity-70 group-hover:scale-105 transition-transform duration-[5s]"
+            class="absolute inset-0 w-full h-full object-cover grayscale brightness-50 contrast-125 opacity-70 group-hover:scale-105 transition-transform duration-[5s]"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6ShGQfA_bnEZucB7NhqMJrB8hMN_fbihkKjzrnuhenx_6F-4ADdmJ9UUKJLSPHImUu8-RCGgBY25Cw2RDdf9snp_TEZm7DJQiBiLFw9qzwT9aPcyAEoVIWxW49UepBbjdd-bXm9SPXPGsR0gs-F0deyjhCu9iAFrBL3W9YNp91HCCRyys21wjaMuhdWiKIw9XpATXQYezdTtkhWIIFcYneQ4dAPTqjr3pPbn7a1HuA2w16x8hvcE-T1nWQKa0w89e_S7w3kOHcc" />
           <div class="absolute inset-0 flex items-center justify-center">
             <div
