@@ -2,7 +2,7 @@
 
 ## 1. Overview & Creative North Star: "Kinetic Brutalism"
 
-This design system is engineered to capture the raw, unyielding energy of a high-intensity CrossFit environment. Our Creative North Star is **"Kinetic Brutalism."** Unlike standard corporate "modern" designs that favor soft safety, this system embraces high-contrast tension, industrial grit, and architectural weight. 
+This design system is engineered to capture the raw, unyielding energy of a high-intensity functional training environment. Our Creative North Star is **"Kinetic Brutalism."** Unlike standard corporate "modern" designs that favor soft safety, this system embraces high-contrast tension, industrial grit, and architectural weight. 
 
 We break the "template" look through:
 *   **Intentional Asymmetry:** Utilizing staggered layouts and overlapping typography to mimic the movement and controlled chaos of a workout.
